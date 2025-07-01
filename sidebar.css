@@ -292,11 +292,6 @@ body.easy-note-sidebar-open {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* When sidebar is open, move toasts to avoid overlap */
-body.easy-note-sidebar-open .easy-note-toast-container {
-  right: 520px; /* Sidebar width (500px) + gap (20px) */
-}
-
 /* Individual toast */
 .easy-note-toast {
   width: 320px;
@@ -443,11 +438,6 @@ body.easy-note-sidebar-open .easy-note-toast-container {
     left: 10px;
   }
   
-  body.easy-note-sidebar-open .easy-note-toast-container {
-    right: 310px; /* Adjusted for mobile sidebar width */
-    left: auto;
-  }
-  
   .easy-note-toast {
     width: auto;
   }
@@ -456,11 +446,6 @@ body.easy-note-sidebar-open .easy-note-toast-container {
 @media (max-width: 480px) {
   .easy-note-toast-container {
     right: 10px;
-    left: 10px;
-  }
-  
-  body.easy-note-sidebar-open .easy-note-toast-container {
-    right: 10px; /* Full width sidebar on mobile */
     left: 10px;
   }
 } 
