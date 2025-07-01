@@ -1,4 +1,4 @@
-/* 侧边栏样式 */
+/* Sidebar styles */
 .easy-note-sidebar {
   position: fixed;
   top: 0;
@@ -15,18 +15,18 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* 侧边栏可见状态 */
+/* Sidebar visible state */
 .easy-note-sidebar.visible {
   right: 0;
 }
 
-/* 当侧边栏打开时，页面body的样式调整 */
+/* Body style adjustments when sidebar is open */
 body.easy-note-sidebar-open {
   margin-right: 500px !important;
   transition: margin-right 0.3s ease-in-out;
 }
 
-/* 侧边栏头部 */
+/* Sidebar header */
 .easy-note-header {
   display: flex;
   justify-content: space-between;
@@ -86,7 +86,7 @@ body.easy-note-sidebar-open {
   stroke: #495057;
 }
 
-/* 侧边栏主体 */
+/* Sidebar main content */
 .easy-note-body {
   flex: 1;
   padding: 20px;
@@ -128,7 +128,7 @@ body.easy-note-sidebar-open {
   color: #adb5bd;
 }
 
-/* 复制按钮 */
+/* Copy button */
 .easy-note-copy-btn {
   position: absolute;
   bottom: 15px;
@@ -172,7 +172,7 @@ body.easy-note-sidebar-open {
   transform: scale(1.05);
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
   .easy-note-sidebar {
     width: 300px;
@@ -203,12 +203,12 @@ body.easy-note-sidebar-open {
   }
 }
 
-/* 防止与其他网站样式冲突 */
+/* Prevent conflicts with other website styles */
 .easy-note-sidebar * {
   box-sizing: border-box;
 }
 
-/* 确保侧边栏在所有元素之上 */
+/* Ensure sidebar is above all elements */
 .easy-note-sidebar {
   z-index: 2147483647;
 } 
