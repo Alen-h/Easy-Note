@@ -49,12 +49,41 @@ function bindEvents() {
 
   // Textarea content change event
   document.getElementById('easy-note-textarea').addEventListener('input', saveContent);
+
+  // Click outside sidebar to close it
+  document.addEventListener('click', handleOutsideClick);
+}
+
+// Handle clicks outside the sidebar
+function handleOutsideClick(event) {
+  // Only handle if sidebar is visible
+  if (!sidebarVisible || !sidebarElement) {
+    return;
+  }
+
+  // Check if the click target is inside the sidebar
+  if (!sidebarElement.contains(event.target)) {
+    hideSidebar();
+  }
 }
 
 // Show sidebar
 async function showSidebar() {
   if (!sidebarElement) {
     await createSidebar();
+    
+    // Wait for the browser to render the initial transform state before adding visible class
+    // This ensures the slide-in animation works properly on first open
+    if (sidebarElement) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          sidebarElement.classList.add('visible');
+          document.body.classList.add('easy-note-sidebar-open');
+          sidebarVisible = true;
+        });
+      });
+      return;
+    }
   }
 
   if (sidebarElement) {
