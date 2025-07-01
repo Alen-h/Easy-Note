@@ -60,14 +60,13 @@ body.easy-note-sidebar-open {
 .easy-note-close-btn {
   background: none;
   border: none;
-  font-size: 18px;
   cursor: pointer;
   color: #6c757d;
-  padding: 5px;
+  padding: 8px;
   border-radius: 3px;
   transition: all 0.2s ease;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,6 +75,15 @@ body.easy-note-sidebar-open {
 .easy-note-close-btn:hover {
   background: #e9ecef;
   color: #495057;
+}
+
+.easy-note-close-btn svg path {
+  stroke: #6c757d;
+  transition: stroke 0.2s ease;
+}
+
+.easy-note-close-btn:hover svg path {
+  stroke: #495057;
 }
 
 /* 侧边栏主体 */
@@ -128,13 +136,25 @@ body.easy-note-sidebar-open {
   background: #007bff;
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
   font-weight: 500;
   transition: all 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.easy-note-copy-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.easy-note-copy-btn svg path {
+  stroke: white;
 }
 
 .easy-note-copy-btn:hover {
