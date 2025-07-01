@@ -1,69 +1,69 @@
-# Easy Note - 便捷笔记 Chrome 插件
+# Easy Note - Chrome Extension
 
-一个简洁易用的Chrome侧边栏笔记插件，让你在浏览网页时轻松记录想法和笔记。
+A simple and easy-to-use Chrome sidebar note-taking extension that allows you to easily record thoughts and notes while browsing the web.
 
-## 功能特点
+## Features
 
-- 🚀 **侧边栏设计**：点击插件图标，打开右侧侧边栏（非浮层，会挤压页面内容）
-- 📝 **实时保存**：输入的内容会自动保存到Chrome本地存储中
-- 📋 **一键复制**：点击左下角复制按钮，快速复制文本框内容到剪贴板
-- 🎨 **现代界面**：清爽的界面设计，支持响应式布局
-- 🔒 **隐私安全**：所有数据仅保存在本地，不会上传到服务器
+- 🚀 **Sidebar Design**: Click the extension icon to open the right sidebar (not an overlay, it compresses page content)
+- 📝 **Auto-save**: Entered content is automatically saved to Chrome local storage
+- 📋 **One-click Copy**: Click the copy button in the bottom left to quickly copy text content to clipboard
+- 🎨 **Modern Interface**: Clean interface design with responsive layout support
+- 🔒 **Privacy & Security**: All data is stored locally only, never uploaded to servers
 
-## 安装方法
+## Installation
 
-1. **下载插件文件**
-   - 将所有文件保存到一个文件夹中
+1. **Download Extension Files**
+   - Save all files to a folder
 
-2. **准备图标文件**
-   - 需要创建三个图标文件：`icon16.png`、`icon48.png`、`icon128.png`
-   - 图标建议使用简洁的记事本或笔记图标
+2. **Prepare Icon Files**
+   - Create three icon files: `icon16.png`, `icon48.png`, `icon128.png`
+   - Icons should use simple notepad or note-taking icons
 
-3. **加载插件到Chrome**
-   - 打开Chrome浏览器
-   - 访问 `chrome://extensions/`
-   - 开启右上角的"开发者模式"
-   - 点击"加载已解压的扩展程序"
-   - 选择包含插件文件的文件夹
+3. **Load Extension into Chrome**
+   - Open Chrome browser
+   - Go to `chrome://extensions/`
+   - Enable "Developer mode" in the top right corner
+   - Click "Load unpacked"
+   - Select the folder containing the extension files
 
-## 使用方法
+## Usage
 
-1. **打开侧边栏**：点击Chrome工具栏中的插件图标
-2. **输入笔记**：在文本框中输入你的笔记内容
-3. **自动保存**：输入的内容会自动保存
-4. **复制内容**：点击左下角的"复制"按钮复制当前内容
-5. **关闭侧边栏**：点击右上角的"✕"按钮
+1. **Open Sidebar**: Click the extension icon in Chrome toolbar
+2. **Enter Notes**: Type your note content in the text area
+3. **Auto-save**: Content is automatically saved as you type
+4. **Copy Content**: Click the "Copy" button in the bottom left to copy current content
+5. **Close Sidebar**: Click the "✕" button in the top right corner
 
-## 文件结构
+## File Structure
 
 ```
 Easy Note/
-├── manifest.json      # 插件配置文件
-├── background.js      # 后台脚本
-├── content.js         # 内容脚本
-├── sidebar.css        # 样式文件
-├── icon16.png         # 16x16 图标
-├── icon48.png         # 48x48 图标
-├── icon128.png        # 128x128 图标
-└── README.md          # 说明文档
+├── manifest.json      # Extension configuration file
+├── background.js      # Background script
+├── content.js         # Content script
+├── sidebar.css        # Style file
+├── icon16.png         # 16x16 icon
+├── icon48.png         # 48x48 icon
+├── icon128.png        # 128x128 icon
+└── README.md          # Documentation
 ```
 
-## 注意事项
+## Notes
 
-- 插件需要Chrome浏览器支持
-- 所有数据仅保存在本地Chrome存储中
-- 侧边栏会挤压页面内容（非浮层设计）
-- 支持响应式设计，在不同屏幕尺寸下自适应
+- Extension requires Chrome browser support
+- All data is stored only in local Chrome storage
+- Sidebar compresses page content (not overlay design)
+- Supports responsive design, adapts to different screen sizes
 
-## 技术特性
+## Technical Features
 
-- 使用Chrome Extension Manifest V3
-- 采用现代CSS实现平滑动画
-- 使用Chrome Storage API进行数据持久化
-- 支持Clipboard API实现一键复制功能
+- Uses Chrome Extension Manifest V3
+- Modern CSS with smooth animations
+- Chrome Storage API for data persistence
+- Clipboard API support for one-click copy functionality
 
-## 开发信息
+## Development Information
 
-- 版本：1.0
-- 兼容性：Chrome浏览器（支持Manifest V3）
-- 权限要求：storage（本地存储）、activeTab（当前标签页访问） 
+- Version: 1.0
+- Compatibility: Chrome browser (supports Manifest V3)
+- Required Permissions: storage (local storage), activeTab (current tab access) 

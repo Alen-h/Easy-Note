@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Easy Note - 便捷笔记",
+  "name": "Easy Note - Quick Notes",
   "version": "1.0",
-  "description": "一个便捷的侧边栏笔记工具",
+  "description": "A convenient sidebar note-taking tool",
   "permissions": [
     "storage",
     "activeTab"
   ],
   "action": {
-    "default_title": "打开笔记侧边栏"
+    "default_title": "Open notes sidebar"
   },
   "background": {
     "service_worker": "background.js"
@@ -22,7 +22,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["icons/*.png"],
+      "resources": ["icons/*.png", "sidebar.html"],
       "matches": ["<all_urls>"]
     }
   ],

@@ -1,5 +1,5 @@
-// 监听插件图标点击事件
+// Listen for extension icon click events
 chrome.action.onClicked.addListener((tab) => {
-  // 向当前标签页发送消息，切换侧边栏状态
+  // Send message to current tab to toggle sidebar state
   chrome.tabs.sendMessage(tab.id, { action: "toggleSidebar" });
 }); 
