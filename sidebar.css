@@ -155,13 +155,20 @@ body.easy-note-sidebar-open {
 }
 
 /* ==========================================================================
-   Copy Button
+   Action Buttons Container
    ========================================================================== */
 
-.easy-note-copy-btn {
+.easy-note-button-container {
   position: absolute;
   bottom: 15px;
   left: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Base styling for action buttons */
+.easy-note-action-btn {
   background: #007bff;
   color: white;
   border: none;
@@ -177,32 +184,58 @@ body.easy-note-sidebar-open {
   gap: 6px;
 }
 
-/* Copy button icon */
-.easy-note-copy-btn svg {
+/* Individual button styling */
+#easy-note-copy {
+  background: #007bff;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+#easy-note-export {
+  background: #28a745;
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+}
+
+/* Button icons */
+.easy-note-action-btn svg {
   width: 16px;
   height: 16px;
 }
 
-.easy-note-copy-btn svg path {
+.easy-note-action-btn svg path {
   stroke: white;
 }
 
-/* Copy button hover effects */
-.easy-note-copy-btn:hover {
-  background: #0056b3;
+/* Button hover effects */
+.easy-note-action-btn:hover {
   transform: translateY(-1px);
+}
+
+#easy-note-copy:hover {
+  background: #0056b3;
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
 }
 
-/* Copy button active state */
-.easy-note-copy-btn:active {
+#easy-note-export:hover {
+  background: #1e7e34;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Button active state */
+.easy-note-action-btn:active {
   transform: translateY(0);
 }
 
-/* Copy button success state after copying */
-.easy-note-copy-btn.copied {
-  background: #28a745;
+/* Button success state after action */
+.easy-note-action-btn.copied {
   transform: scale(1.05);
+}
+
+#easy-note-copy.copied {
+  background: #28a745;
+}
+
+#easy-note-export.copied {
+  background: #17a2b8;
 }
 
 /* ==========================================================================
@@ -243,4 +276,191 @@ body.easy-note-sidebar-open {
 /* Ensure sidebar appears above all other elements on any website */
 .easy-note-sidebar {
   z-index: 2147483647;
+}
+
+/* ==========================================================================
+   Toast Component Styles
+   ========================================================================== */
+
+/* Toast container - holds all active toasts */
+.easy-note-toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2147483648; /* Higher than sidebar */
+  pointer-events: none; /* Allow clicks to pass through container */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* When sidebar is open, move toasts to avoid overlap */
+body.easy-note-sidebar-open .easy-note-toast-container {
+  right: 520px; /* Sidebar width (500px) + gap (20px) */
+}
+
+/* Individual toast */
+.easy-note-toast {
+  width: 320px;
+  margin-bottom: 10px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  pointer-events: auto; /* Re-enable interactions for individual toasts */
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  overflow: hidden;
+  
+  /* Animation - slide in from right */
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Toast visible state */
+.easy-note-toast.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Toast fade out animation */
+.easy-note-toast.fade-out {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Toast types */
+.easy-note-toast.success {
+  background: #d4edda;
+  border-left: 4px solid #28a745;
+  color: #155724;
+}
+
+.easy-note-toast.error {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+  color: #721c24;
+}
+
+.easy-note-toast.warning {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  color: #856404;
+}
+
+.easy-note-toast.info {
+  background: #d1ecf1;
+  border-left: 4px solid #17a2b8;
+  color: #0c5460;
+}
+
+/* Toast icon */
+.easy-note-toast-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+
+/* Toast content */
+.easy-note-toast-content {
+  flex: 1;
+}
+
+.easy-note-toast-title {
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  font-size: 14px;
+}
+
+.easy-note-toast-message {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Toast close button */
+.easy-note-toast-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.easy-note-toast-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.easy-note-toast-close svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Progress bar for auto-dismiss */
+.easy-note-toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.2);
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform linear;
+}
+
+.easy-note-toast.success .easy-note-toast-progress {
+  background: #28a745;
+}
+
+.easy-note-toast.error .easy-note-toast-progress {
+  background: #dc3545;
+}
+
+.easy-note-toast.warning .easy-note-toast-progress {
+  background: #ffc107;
+}
+
+.easy-note-toast.info .easy-note-toast-progress {
+  background: #17a2b8;
+}
+
+/* Mobile responsiveness for toasts */
+@media (max-width: 768px) {
+  .easy-note-toast-container {
+    right: 10px;
+    left: 10px;
+  }
+  
+  body.easy-note-sidebar-open .easy-note-toast-container {
+    right: 310px; /* Adjusted for mobile sidebar width */
+    left: auto;
+  }
+  
+  .easy-note-toast {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .easy-note-toast-container {
+    right: 10px;
+    left: 10px;
+  }
+  
+  body.easy-note-sidebar-open .easy-note-toast-container {
+    right: 10px; /* Full width sidebar on mobile */
+    left: 10px;
+  }
 } 

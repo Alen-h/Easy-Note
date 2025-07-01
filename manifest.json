@@ -5,7 +5,8 @@
   "description": "A convenient sidebar note-taking tool",
   "permissions": [
     "storage",
-    "activeTab"
+    "activeTab",
+    "downloads"
   ],
   "action": {
     "default_title": "Open notes sidebar"
