@@ -7,9 +7,12 @@ alwaysApply: true
 
 ## Language Requirements
 - **Project Language**: All code, documentation, variable names, function names, and commit messages MUST be in English
-- **Code Comments**: All code comments MUST be written in Chinese (中文)
+- **Code Comments**: All code comments MUST be written in Chinese (中文) - **THIS IS THE ONLY EXCEPTION**
+- **Debug Output**: All debugging output (console.log, console.error, etc.) MUST be in English
 - **Documentation**: README files and user-facing documentation should be in English
 - **UI Text**: User interface text should be in English for broader accessibility
+
+**Important**: Only code comments use Chinese. Everything else (variable names, function names, debug output, documentation, UI text, commit messages, etc.) uses English.
 
 ## Code Style & Standards
 
@@ -61,7 +64,8 @@ alwaysApply: true
 
 ## Error Handling & Debugging
 - Implement comprehensive error handling with Chinese comments explaining error scenarios
-- Use console.log/console.error with descriptive English messages
+- Use console.log/console.error/console.warn with descriptive English messages ONLY
+- All debugging output and error messages must be in English for universal understanding
 - Create fallback mechanisms for critical functionality
 - Document known issues and workarounds in Chinese comments
 
@@ -102,6 +106,10 @@ alwaysApply: true
 - Check for security and performance implications
 
 ## Examples
+
+**Key Points for Examples:**
+- Code comments: Chinese only (中文)
+- All other content: English only (variable names, function names, debug output, error messages, etc.)
 
 ### Good Code Example:
 ```javascript
