@@ -34,6 +34,10 @@ build/
 *.pem
 *.zip
 
+# Chrome extension packaging (Easy Note specific)
+releases/
+temp_package/
+
 # Environment variables
 .env
 .env.local
