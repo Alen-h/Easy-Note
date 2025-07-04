@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Easy Note - Quick Notes",
   "version": "1.0",
-  "description": "A convenient sidebar note-taking tool",
+  "description": "A simple Chrome sidebar extension for taking notes while browsing the web.",
   "permissions": [
     "storage",
     "activeTab",
