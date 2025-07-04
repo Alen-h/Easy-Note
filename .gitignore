@@ -34,9 +34,12 @@ build/
 *.pem
 *.zip
 
-# Chrome extension packaging (Easy Note specific)
+# Chrome extension packaging and releases
 releases/
 temp_package/
+
+# Chrome Web Store files (keep these tracked)
+# Chrome_Web_Store_*.txt files should remain tracked for store submission
 
 # Environment variables
 .env

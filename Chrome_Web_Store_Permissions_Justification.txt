@@ -1,0 +1,18 @@
+# Chrome Web Store Permissions Justification
+
+## 单一用途说明 (Single Purpose Description)
+Easy Note is a simple note-taking extension that allows users to capture thoughts and ideas while browsing any website. The extension provides a sidebar interface where users can write, save, copy, and export their notes without leaving the current webpage. All notes are stored locally on the user's device for privacy and security.
+
+## 权限理由 (Permission Justifications)
+
+### 需要求 storage 的理由 (Storage Permission Justification)
+The storage permission is required to save user notes locally on their device. This allows notes to persist between browser sessions and provides automatic saving functionality. All data is stored in Chrome's local storage and never transmitted to external servers, ensuring complete user privacy.
+
+### 需要求 activeTab 的理由 (ActiveTab Permission Justification)
+The activeTab permission is required to inject the sidebar interface into the current active tab where the user is browsing. This permission allows the extension to display the note-taking sidebar on the current webpage without requiring access to all tabs simultaneously, following the principle of minimal permissions.
+
+### 需要求 downloads 的理由 (Downloads Permission Justification)
+The downloads permission is required to enable the export functionality, allowing users to save their notes as .txt files to their local computer. This permission is only used when users explicitly click the export button to download their notes, providing a backup and sharing option for their content.
+
+### 需要主机权限的理由 (Host Permission Justification)
+Host permissions for all URLs are required to inject the sidebar interface and styling into any website the user visits. This enables the note-taking functionality to work universally across all websites, allowing users to take notes while browsing any web content. The extension only injects a sidebar interface and does not read, modify, or transmit any website content. 

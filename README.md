@@ -14,10 +14,9 @@ A simple Chrome sidebar extension for taking notes while browsing the web.
 ## Installation
 
 ### For Users (Chrome Web Store)
-1. Download the latest release from the `releases/` folder
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer mode"
-4. Click "Load unpacked" and select the extracted folder
+1. Visit the Chrome Web Store and search for "Easy Note"
+2. Click "Add to Chrome" to install the extension
+3. The extension icon will appear in your Chrome toolbar
 
 ### For Developers
 1. Clone or download this repository
@@ -33,22 +32,13 @@ A simple Chrome sidebar extension for taking notes while browsing the web.
 4. Use the **Export** button to download notes as a .txt file
 5. Click the **✕** button to close the sidebar
 
-## Development & Packaging
+## Chrome Web Store Submission
 
-### Packaging for Chrome Web Store
-This project includes an automated packaging script:
+The project includes documentation for Chrome Web Store submission:
 
-```bash
-./package.sh
-```
-
-The script will:
-- Create a `releases/` directory
-- Generate a timestamped zip file ready for Chrome Web Store submission
-- Include all necessary files while excluding development files
-- Create a package information file with version details
-
-For detailed packaging instructions, see [PACKAGE_USAGE.md](PACKAGE_USAGE.md).
+- **Chrome_Web_Store_Simple_Description.txt**: Marketing description and feature highlights for the Chrome Web Store listing
+- **Chrome_Web_Store_Permissions_Justification.txt**: Detailed justification for each permission requested by the extension
+- **PRIVACY_POLICY.md**: Comprehensive privacy policy explaining data handling practices
 
 ### Privacy Policy
 The extension includes a comprehensive privacy policy ([PRIVACY_POLICY.md](PRIVACY_POLICY.md)) that explains:
@@ -61,17 +51,17 @@ The extension includes a comprehensive privacy policy ([PRIVACY_POLICY.md](PRIVA
 
 ```
 Easy Note/
-├── manifest.json          # Extension configuration
-├── background.js          # Background script
-├── content.js             # Content script
-├── sidebar.html           # Sidebar interface
-├── sidebar.css            # Styling
-├── README.md              # Project documentation
-├── PRIVACY_POLICY.md      # Privacy policy for Chrome Web Store
-├── package.sh             # Packaging script for releases
-├── PACKAGE_USAGE.md       # Packaging script usage guide
-├── releases/              # Generated packages (git ignored)
-└── icons/                 # Extension icons
+├── manifest.json                              # Extension configuration
+├── background.js                              # Background script
+├── content.js                                 # Content script
+├── sidebar.html                               # Sidebar interface
+├── sidebar.css                                # Styling
+├── README.md                                  # Project documentation
+├── PRIVACY_POLICY.md                          # Privacy policy for Chrome Web Store
+├── Chrome_Web_Store_Simple_Description.txt    # Chrome Web Store marketing description
+├── Chrome_Web_Store_Permissions_Justification.txt # Permission justifications
+├── LICENSE                                    # Open source license
+└── icons/                                     # Extension icons
     ├── icon16.png
     ├── icon48.png
     ├── icon128.png
@@ -86,15 +76,19 @@ Easy Note/
 - **Storage**: Chrome local storage API (no external servers)
 - **Privacy**: All data stored locally, no tracking or analytics
 
-## Chrome Web Store Submission
+## Development
 
-The project is ready for Chrome Web Store submission:
+### Local Development
+1. Make your changes to the extension files
+2. Go to `chrome://extensions/` in Chrome
+3. Click the refresh button on the Easy Note extension card
+4. Test your changes
 
-1. **Package Creation**: Use `./package.sh` to create a submission-ready zip file
-2. **Privacy Policy**: Included in the package and available as a standalone document
-3. **Icons**: All required icon sizes included (16px, 48px, 128px, 1024px)
-4. **Manifest V3**: Uses the latest Chrome extension manifest format
-5. **Permissions**: Minimal required permissions with clear explanations
+### Submission to Chrome Web Store
+1. Create a zip file containing all project files (excluding development files)
+2. Submit to Chrome Web Store Developer Dashboard
+3. Include the privacy policy and permission justifications
+4. All required documentation is included in this repository
 
 ## Author
 

@@ -1,0 +1,76 @@
+🚀 Make note-taking simple and efficient while browsing the web!
+
+Easy Note is a lightweight Chrome extension for quick note-taking while browsing. Perfect for students, researchers, writers, and professionals who need to capture thoughts without leaving the current page.
+
+🎯 Why Choose Easy Note?
+
+• No tab switching - take notes directly on any webpage
+• Never lose ideas - automatic saving to local storage
+• Stay focused - seamless sidebar interface
+• Quick export - save notes as .txt files instantly
+
+✨ Key Features
+
+🎨 Elegant Sidebar Interface
+- Click extension icon to open sidebar
+- Doesn't obstruct web content
+- Works on all websites
+
+💾 Smart Auto-Save
+- Real-time saving to local storage
+- No manual save required
+- Notes persist after browser restart
+
+📋 One-Click Actions
+- Copy notes to clipboard
+- Export as .txt files
+- Clear success notifications
+
+🛡️ Privacy & Security
+
+🔐 100% Local Storage
+- All data stays on your device
+- No server uploads
+- No personal data collection
+
+📊 No Tracking
+- No analytics or usage tracking
+- Complete privacy protection
+
+🚀 Technical Highlights
+
+⚡ Lightweight & Fast
+- Under 1MB size
+- No performance impact
+- Manifest V3 standard
+
+🌐 Universal Compatibility
+- Works on all websites
+- Modern Chrome versions supported
+
+📖 How to Use
+
+1. Click Easy Note icon in Chrome toolbar
+2. Type your notes in the sidebar
+3. Notes auto-save as you type
+4. Use Copy/Export buttons as needed
+5. Click ✕ to close sidebar
+
+🎯 Perfect For
+
+📚 Study & Research - capture key insights while reading
+💼 Work Notes - quick meeting or project notes
+🛍️ Shopping Lists - compare products and prices
+📰 News Reading - collect interesting information
+🎓 Online Learning - record important concepts
+
+✅ Get Started
+
+- Completely free to use
+- No registration required
+- Install and use immediately
+- Regular updates
+
+Make note-taking effortless while browsing - install Easy Note today!
+
+Developer: Alen Hu | Version: 1.0 
